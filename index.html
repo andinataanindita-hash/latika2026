@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySync - Dashboard Produktivitas Kelas 11</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Google Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>Study<span>Sync</span></h1>
+        </div>
+        <button id="theme-toggle" class="btn-secondary">🌙 Mode Gelap</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h2>Kelola Target & Jadwal Belajar Kelas 11 Lebih Efektif</h2>
+            <p>Atur tugas sekolah, jadwal pelajaran, dan persiapkan masa depanmu dari satu dashboard interaktif.</p>
+        </div>
+        <div class="hero-image">
+            <img src="hero-study.jpg" alt="Ilustrasi Belajar StudySync">
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="dashboard-container">
+        
+        <!-- Form Tambah Tugas -->
+        <section class="card form-card">
+            <h3>➕ Tambah Tugas Baru</h3>
+            <form id="task-form">
+                <div class="input-group">
+                    <label for="task-title">Judul Tugas / Pelajaran</label>
+                    <input type="text" id="task-title" placeholder="Contoh: Tugas MTK Bab 3" required>
+                </div>
+                <div class="input-group">
+                    <label for="task-category">Kategori</label>
+                    <select id="task-category">
+                        <option value="SMA - Akademik">SMA - Akademik</option>
+                        <option value="SMK - Praktikum/PKL">SMK - Praktikum/PKL</option>
+                        <option value="Ujian / Ulangan">Ujian / Ulangan</option>
+                        <option value="Ekstrakurikuler">Ekstrakurikuler</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="task-date">Tenggat Waktu (Deadline)</label>
+                    <input type="date" id="task-date" required>
+                </div>
+                <button type="submit" class="btn-primary">Simpan Tugas</button>
+            </form>
+        </section>
+
+        <!-- Daftar Tugas (To-Do List) -->
+        <section class="card list-card">
+            <div class="list-header">
+                <h3>📋 Daftar Tugas Sekolah</h3>
+                <span id="task-counter" class="badge">0 Tugas</span>
+            </div>
+            <ul id="task-list" class="task-list">
+                <!-- Elemen tugas akan disuntikkan lewat JavaScript -->
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Dibuat oleh Siswa Kelas 11 | Dipublikasikan via GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
